@@ -1,0 +1,181 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+}
+
+:root {
+  --colorPrimary: #00BCD4;
+  --colorSecondary: white;
+  --colorAncent: deepskyblue;
+}
+
+body {
+  font-family: monospace;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: var(--colorPrimary);
+  color: var(--colorSecondary);
+  text-align: center;
+  transition: 0.5s ease-in;
+}
+
+.project-title, .app-title{
+  text-align: center;
+}
+
+.container {
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  min-height: 85vh;
+}
+
+.dates {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  min-width: 55vh;
+}
+
+.from,.to{
+  color: midnightblue;
+}
+
+hr {
+  width: 3rem;
+  height: 5px;
+  border: none;
+  background: linear-gradient(45deg, white, #f4425c);
+  border-radius: 5px;
+}
+
+.box {
+  width: 25em;
+  height: 9em;
+  border-radius: 1em;
+  background-color: white;
+  color: var(--colorAncent);
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.box-data img {
+  max-width: 65px;
+}
+
+
+/* socialButton */
+.follow {
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.follow-me {
+  margin: 0 0 5px 0;
+}
+
+.social-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  min-width: 25vh;
+  transition: 0.75s ease;
+}
+
+.social-button {
+  background-color:  lightyellow;
+  padding: 3px 3px 1px 3px;
+  border-radius: 50%;
+  position: relative;
+}
+
+.social-button:hover{
+  transform: translateY(-3px);
+  box-shadow: 0 3px 5px rgba(100,100,100, 0.7);
+}
+
+.social-icon {
+  max-width: 15px;
+}
+
+/* Love icon */
+.love{
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  margin-top: 3px;
+  margin-left: -2px;
+  background-color: red;
+  transform: rotate(45deg);
+  display: inline;
+}
+
+.love::after,
+.love::before {
+  content: "";
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  background-color: red;
+  border-radius: 50%;
+}
+
+.love::after {
+  top: -5px;
+  left: 0;
+}
+
+.love::before {
+  top: 0;
+  left: -5px;
+}
+
+.text-footer{
+  margin: 0 10px;
+  text-align: center;
+}
+
+.author {
+  color: deeppink;
+}
+
+@media only screen and (max-width: 500px) {
+  .container {
+    flex-direction: column;
+  }
+  .menu {
+    margin: 15px 15px 0 15px;
+    width: inherit;
+  }
+  .content {
+    margin: 0 15px;
+    padding: 10px 15px;
+  }
+  .diagram {
+    margin: 0 15px;
+  }
+  .title, .result-code, .play-btn {
+    margin: 5px 0;
+  }
+  .menu,
+  .content,
+  .diagram {
+    width: 215px;
+  }
+}
+/* @media only screen and (max-height: 700px) {
+  .a::before {
+    top: 55px;
+  }
+} */
