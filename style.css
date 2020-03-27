@@ -72,8 +72,9 @@ hr {
   max-width: 65px;
 }
 
-.datas {
+.datas, .to {
   transition: 1s ease;
+  animation: loading 1s ease infinite;
 }
 
 .loading {
@@ -117,6 +118,15 @@ hr {
 
 .social-icon {
   max-width: 15px;
+}
+
+@keyframes loading {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
 }
 
 /* Love icon */
