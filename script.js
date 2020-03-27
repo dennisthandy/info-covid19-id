@@ -6,7 +6,7 @@ const recovered = document.querySelector('#recovered');
 fetch("https://corona.lmao.ninja/countries/Indonesia")
   .then(response => response.json())
   .then(data => {
-    console.log(data);
+//     console.log(data);
     to.innerHTML = formatDate();
     confirmed.innerHTML = data.cases;
     deaths.innerHTML = data.deaths;
