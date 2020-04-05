@@ -12,6 +12,7 @@
   --colorText: #00a8cc;
   --colorLove: #f0134d;
   --colorHeader: #ffa41b;
+  --colorSocial: rgba(39, 73, 109, 0.5);
 }
 
 body {
@@ -84,19 +85,22 @@ hr {
 
 .datas, .to {
   transition: 1s ease;
-  animation: loading 1s ease infinite;
-}
-
-.loading {
-  width: 1rem;
-  height: 1rem;
-  background: linear-gradient(45deg, white, var(--colorPrimary))
+  animation: loading .7s ease infinite;
 }
 
 .data-source a {
   color: var(--colorHeader);
   text-decoration: none;
   font-size: 10pt;
+}
+
+@keyframes loading {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
 }
 
 
@@ -122,7 +126,7 @@ hr {
   opacity: 0;
   transform: scale(.5);
   transition: .5s ease;
-  background-color: var(--colorSecondary);
+  background-color: var(--colorSocial);
 }
 
 .social-container > .social-item {
