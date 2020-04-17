@@ -4,7 +4,7 @@ const deaths = document.querySelector('#deaths');
 const recovered = document.querySelector('#recovered');
 const datas = document.querySelectorAll('.datas');
 
-fetch("https://corona.lmao.ninja/countries/Indonesia")
+fetch("https://corona.lmao.ninja/v2/countries/Indonesia")
   .then(response => response.json())
   .then(data => {
     if (data != undefined) {
